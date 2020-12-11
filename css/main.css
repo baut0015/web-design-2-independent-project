@@ -197,9 +197,25 @@ nav ul {
   margin: 0 80px 30px;
 }
 
-.foot {
+.site-footer {
   background-color: #db45ab;
-  margin: 0 auto;
+  padding: 45px 0 20px;
+  font-size: 0.8rem;
+  line-height: 24px;
+  color: #fff;
+}
+
+.social-1 {
+  display: flex;
+  justify-content: center;
+}
+
+.social-4 {
+  width: 40%;
+}
+
+.social-3 {
+  width: 30%;
 }
 
 main p {
