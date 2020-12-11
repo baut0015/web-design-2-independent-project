@@ -21,12 +21,76 @@ body {
 }
 
 header {
-  font-family: 'Bubblegum Sans', cursive;
+  font-family: "Bubblegum Sans", cursive;
 }
 
 nav {
   height: 90px;
   background: #db45ab;
+  margin: 0 auto;
+}
+
+.head-form {
+  display: flex;
+  text-align: center;
+}
+
+.sec-form {
+  height: 100vh;
+  width: 100%;
+  background color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Bree Serif", serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  box-shadow: 0px 0px 20px #00000010;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-group {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 1rem;
+}
+
+.form-group input,
+.form-group textarea{
+  width: 100%;
+  padding: 5px
+  font-size: 1rem;
+  border: 1px solid rgba(128, 128, 128, 0.199);
+  margin-top: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"]{
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Bree Serif", serif;
+}
+
+.art {
+  width: 30%;
 }
 
 .logo {
@@ -38,17 +102,33 @@ nav {
   order: 1;
 }
 
+.area {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.intro {
+  font-size: 3rem;
+  line-height: 1.5px;
+  text-align: center;
+  font-family: "Bubblegum Sans", cursive;
+}
+
 nav ul li a {
   position: relative;
   padding: 5px 0;
   color: #fff;
-  font-size: 20px;
+  font-size: 1.25rem;
   text-decoration: none;
+  display: block;
+  margin: 40px 0;
+  line-height: 30px;
 }
 
 label #sign-one,
 label #sign-two {
-  font-size: 30px;
+  font-size: 1.875rem;
   color: #fff;
   float: right;
   line-height: 50px;
@@ -57,65 +137,99 @@ label #sign-two {
   display: none;
 }
 
-#res-menu{
+#res-menu {
   display: none;
 }
 
-.banner-text{
-  font-family: 'Bubblegum Sans', cursive;
-  font-size: 95px;
+.banner-text {
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 5.9rem;
 }
 
-.danyleon2{
-  width: 120%;
+.danyleon2 {
+  object-fit: cover;
+
+  width: 381px;
+  height: 370px;
 }
 
-  label #sign-one{
-    display: block;
-  }
-  nav ul{
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 50px;
-    background: #ff80d5;
-    left: -100%;
-    text-align: center;
-    transition: .5s;
-    z-index: 10;
-  }
+label #sign-one {
+  display: block;
+}
 
-  nav ul li {
-    display: block;
-    margin: 40px 0;
-    line-height: 30px;
-  }
+nav ul {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 50px;
+  background: #ff80d5;
+  left: -100%;
+  text-align: center;
+  transition: .5s;
+  z-index: 10;
+}
 
-  nav ul li a{
-    font-size: 20px;
-  }
+#res-menu:checked ~ ul {
+  left: 0;
+}
 
-  #res-menu:checked ~ ul{
-    left: 0;
-  }
+#res-menu:checked ~ label #sign-one {
+  display: none;
+}
 
-  #res-menu:checked ~ label #sign-one{
-    display: none;
-  }
+#res-menu:checked ~ label #sign-two {
+  display: block;
+}
 
-  #res-menu:checked ~ label #sign-two{
-    display: block;
-  }
+.start-text {
+  display: grid;
+}
 
-  .button-contact {
-  font-family: 'Bubblegum Sans', cursive;
+.button-contact {
+  font-family: "Bubblegum Sans", cursive;
   color: #fff;
   background-color: #db45ab;
-  font-size: 39px;
+  font-size: 1.5rem;
   border-radius: 50px;
-  padding: 10px 24px;
-  }
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0 80px 30px;
+}
 
+.foot {
+  background-color: #db45ab;
+  margin: 0 auto;
+}
+
+main p {
+  font-family: "Bree Serif", serif;
+  font-size: 1rem;
+  text-align: center;
+  margin: 30px;
+}
+
+main h1 {
+  font-family: "Bubblegum Sans", cursive;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr) );
+  grid-auto-rows: 150px;
+  grid-gap: 20px;
+  margin-bottom: 150px;
+}
+
+.gall {
+  width: 100%;
+}
+
+.personal {
 
 @media only screen and (min-width: 38em) {
 
@@ -123,7 +237,7 @@ label #sign-two {
     display: none;
   }
 
-  .banner-area {
+  .area {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
@@ -141,11 +255,10 @@ label #sign-two {
     grid-gap: 1rem;
     text-align: center;
     justify-items: center;
-    grid-template-areas:
-      "logo content"
+    margin: 0 auto;
   }
 
-.content {
+  .content {
     display: contents;
     display: inline-block;
     line-height: 50px;
@@ -157,12 +270,9 @@ label #sign-two {
     grid-template-columns: 1fr;
   }
 
-  .banner-text {
+  .ban-text {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat (5, 1fr);
   }
-
-
 
 }
