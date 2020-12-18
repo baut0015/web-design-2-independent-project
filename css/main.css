@@ -28,6 +28,7 @@ nav {
   height: 90px;
   background: #db45ab;
   margin: 0 auto;
+  text-decoration: none;
 }
 
 .head-form {
@@ -185,6 +186,10 @@ nav ul {
   display: grid;
 }
 
+ul.content{
+  list-style-type: none;
+}
+
 .button-contact {
   font-family: "Bubblegum Sans", cursive;
   color: #fff;
@@ -198,6 +203,7 @@ nav ul {
 }
 
 .site-footer {
+  grid-column: 1 / span 3;
   background-color: #db45ab;
   padding: 45px 0 20px;
   font-size: 0.8rem;
@@ -216,6 +222,10 @@ nav ul {
 
 .social-3 {
   width: 30%;
+}
+
+.footer-c{
+  text-align: center;
 }
 
 main p {
@@ -244,8 +254,6 @@ main h1 {
 .gall {
   width: 100%;
 }
-
-.personal {
 
 @media only screen and (min-width: 38em) {
 
